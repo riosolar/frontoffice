@@ -1,0 +1,12 @@
+@use './colors' as *;
+
+a {
+    color: $primaryDefault;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        color: $primaryLight;
+    }
+}

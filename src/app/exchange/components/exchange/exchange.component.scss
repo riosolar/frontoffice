@@ -1,0 +1,37 @@
+:host {
+    max-width: 960px;
+    width: 100%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    margin-bottom: 32px;
+
+    app-sell {
+        display: block;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    app-buy {
+        display: block;
+        width: 100%;
+    }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .agreements {
+        display: flex;
+        align-items: center;
+
+        tui-checkbox-labeled:first-child {
+            display: block;
+            margin-right: 20px;
+        }
+    }
+}

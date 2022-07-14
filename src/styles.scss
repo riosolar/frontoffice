@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'assets/styles/taiga';
+@use 'assets/styles/links';
+@use 'assets/styles/colors';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}

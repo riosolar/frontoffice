@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <div class="title">Вы получите</div>
+    <form [formGroup]="form">
+        <div class="amount">
+            <tui-input-number [postfix]="'KZT'" formControlName="amount" tuiTextfieldSize="m">
+                Количество
+            </tui-input-number>
+            <div class="minmax">
+                min.: 20 000 KZT, max.: 61 028 419.09 KZT
+            </div>
+        </div>
+        <div class="bank">
+            <tui-select #select formControlName="bank" tuiTextfieldSize="m" [valueContent]="bankContent">
+                Выберите банк
+                <tui-data-list-wrapper *tuiDataList [items]="banks" [itemContent]="bankContent">
+                </tui-data-list-wrapper>
+            </tui-select>
+        </div>
+        <tui-input-card formControlName="cardNumber" tuiTextfieldSize="m">Номер карты</tui-input-card>
+    </form>
+</div>
+
+<ng-template #bankContent let-bank>
+    <div class="bank-content">
+        <img [src]="bank.icon" alt=""> {{ bank.name}}
+    </div>
+</ng-template>

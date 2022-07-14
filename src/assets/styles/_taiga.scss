@@ -1,0 +1,12 @@
+@use './colors' as *;
+
+:root {
+    --tui-primary: #0070f3;
+    --tui-primary-hover: #3291ff;
+    --tui-primary-active: #0761d1;
+}
+
+tui-root tui-dropdown-host > .content {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <app-sell [form]="sellForm"></app-sell>
+    <app-buy [form]="buyForm"></app-buy>
+</div>
+<div class="actions">
+    <div class="agreements">
+        <tui-checkbox-labeled [formControl]="exchangeAgreement">
+            Я согласен(-a) с Условиями обмена
+        </tui-checkbox-labeled>
+        <tui-checkbox-labeled [formControl]="serviceAgreement">
+            Я согласен(-a) с Правилами предоставления услуг
+        </tui-checkbox-labeled>
+    </div>
+    <button tuiButton class="submit">Обменять</button>
+</div>
