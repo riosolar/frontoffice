@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-exchange',
@@ -9,20 +9,24 @@ import { FormBuilder, FormControl } from '@angular/forms';
 })
 export class ExchangeComponent implements OnInit {
     public readonly sellForm = this.formBuilder.group({
-        token: null,
-        amount: null,
-        address: null
+        token: [null, Validators.required],
+        amount: [null, Validators.required],
+        address: [null, Validators.required]
     });
 
     public readonly buyForm = this.formBuilder.group({
-        amount: null,
-        bank: null,
-        cardNumber: null
+        amount: [null, Validators.required],
+        bank: [null, Validators.required],
+        cardNumber: [null, Validators.required]
     });
     
     public readonly exchangeAgreement = new FormControl(false);
 
     public readonly serviceAgreement = new FormControl(false);
+
+    get isValid(): boolean {
+        return Boolean(this.exchangeAgreement.value) && Boolean(this.serviceAgreement.value) && this.sellForm.valid && this.buyForm.valid;
+    }
 
     constructor(private readonly formBuilder: FormBuilder) { }
 

@@ -11,5 +11,5 @@
             Я согласен(-a) с Правилами предоставления услуг
         </tui-checkbox-labeled>
     </div>
-    <button tuiButton class="submit">Обменять</button>
+    <button tuiButton class="submit" [disabled]="!isValid">Обменять</button>
 </div>
