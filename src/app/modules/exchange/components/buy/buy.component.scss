@@ -1,0 +1,38 @@
+.wrapper {
+    background: #1A1A1A;
+    border-radius: 20px;
+    padding: 32px;
+}
+
+.title {
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--tui-info-fill);
+    font-weight: 800;
+}
+
+.amount {
+    margin-bottom: 16px;
+
+    .minmax {
+        margin-top: 4px;
+    }
+}
+
+.bank {
+    margin-bottom: 16px;
+}
+
+.bank-content {
+    display: flex;
+    align-items: center;
+    img {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        border-radius: 4px;
+    }
+}

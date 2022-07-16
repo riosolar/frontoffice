@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterModule } from "./footer/footer.component";
-import { HeaderModule } from "./header/header.component";
+import { FooterModule } from "./modules/footer/footer.component";
+import { HeaderModule } from "./modules/header/header.component";
 
 @NgModule({
   declarations: [

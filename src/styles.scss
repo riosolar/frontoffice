@@ -1,11 +1,10 @@
 @use 'assets/styles/taiga';
-@use 'assets/styles/links';
-@use 'assets/styles/colors';
+@use 'assets/styles/link';
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    background: black;
+    background: #000;
 }

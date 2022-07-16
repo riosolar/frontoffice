@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -9,23 +10,28 @@ const routes: Routes = [
   },
   {
     path: 'exchange',
-    loadChildren: () => import('./exchange/exchange.module').then(m => m.ExchangeModule)
+    loadChildren: () => import('./modules/exchange/exchange.module').then(m => m.ExchangeModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'terms',
-    loadChildren: () => import('./terms/terms.module').then(m => m.TermsModule)
+    loadChildren: () => import('./modules/terms/terms.module').then(m => m.TermsModule)
   },
   {
     path: 'faq',
-    loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule)
+    loadChildren: () => import('./modules/faq/faq.module').then(m => m.FaqModule)
   },
   {
     path: 'contacts',
-    loadChildren: () => import('./contacts/contacts.module').then(m => m.ContactsModule)
+    loadChildren: () => import('./modules/contacts/contacts.module').then(m => m.ContactsModule)
   }
 ];
 

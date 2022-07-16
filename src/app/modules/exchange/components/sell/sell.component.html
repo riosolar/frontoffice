@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="title">Вы отдаете</div>
+    <form [formGroup]="form">
+        <div class="token">
+            <tui-select #select formControlName="token" [valueContent]="tokenContent">
+                Выберите токен
+                <tui-data-list-wrapper *tuiDataList [items]="tokens" [itemContent]="tokenContent">
+                </tui-data-list-wrapper>
+            </tui-select>
+            <div class="rates">
+                Курс обмена: 1 ETH = 520 386.02 KZT , комиссия 2% ≈ 0.02 ETH
+            </div>
+        </div>
+        <div class="amount">
+            <tui-input-number [postfix]="'ETH'" formControlName="amount">
+                Количество
+            </tui-input-number>
+            <div class="minmax">
+                min.: 668.2 ETH, max.: 2 039 038.4 ETH
+            </div>
+        </div>
+        <tui-input formControlName="address">
+            Кошелек списания
+            <input tuiTextfield type="text" />
+        </tui-input>
+    </form>
+</div>
+
+<ng-template #tokenContent let-token>
+    <div class="token-content">
+        <img [src]="token.icon" alt="">
+        <span class="symbol">{{ token.symbol }}</span> · <span class="blockchain">{{ token.blockchain}}</span>
+    </div>
+</ng-template>

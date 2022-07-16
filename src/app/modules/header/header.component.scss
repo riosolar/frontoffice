@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 100px 32px 100px;
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+
+        .register {
+            margin-right: 24px;
+        }
+
+        .login {
+            margin-right: 24px;
+        }
+    }
+}

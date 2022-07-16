@@ -1,0 +1,21 @@
+.auth-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    border: 1px solid #a1a1a1;
+    background: #111;
+    border-radius: 10px;
+
+    .form {
+        width: 50%;
+        padding: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about {
+        width: 50%;
+    }
+}
