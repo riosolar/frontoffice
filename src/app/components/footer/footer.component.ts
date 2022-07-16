@@ -1,4 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-footer',
@@ -11,10 +14,6 @@ export class FooterComponent implements OnInit {
 
     ngOnInit(): void { }
 }
-
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [FooterComponent],

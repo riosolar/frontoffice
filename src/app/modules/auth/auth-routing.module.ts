@@ -10,8 +10,8 @@ const routes: Routes = [
         path: '',
         component: AuthContainerComponent,
         children: [
-            { path: 'login', component: LoginComponent },
-            { path: 'register', component: RegisterComponent },
+            { path: 'login', component: LoginComponent, data: { title: 'Вход' } },
+            { path: 'register', component: RegisterComponent, data: { title: 'Регистрация' } },
         ]
     }
 ];

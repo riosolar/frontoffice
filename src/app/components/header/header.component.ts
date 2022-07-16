@@ -1,4 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TuiButtonModule } from '@taiga-ui/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -23,12 +27,6 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(['auth', 'register']);
     }
 }
-
-
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TuiButtonModule } from '@taiga-ui/core';
-import { Router } from '@angular/router';
 
 @NgModule({
     declarations: [HeaderComponent],

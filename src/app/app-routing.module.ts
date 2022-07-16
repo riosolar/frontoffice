@@ -10,12 +10,18 @@ const routes: Routes = [
   },
   {
     path: 'exchange',
-    loadChildren: () => import('./modules/exchange/exchange.module').then(m => m.ExchangeModule)
+    loadChildren: () => import('./modules/exchange/exchange.module').then(m => m.ExchangeModule),
+    data: {
+      title: 'Обмен'
+    }
   },
   {
     path: 'profile',
     loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule),
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
+    data: {
+      title: 'Профиль'
+    }
   },
   {
     path: 'auth',
@@ -23,15 +29,24 @@ const routes: Routes = [
   },
   {
     path: 'terms',
-    loadChildren: () => import('./modules/terms/terms.module').then(m => m.TermsModule)
+    loadChildren: () => import('./modules/terms/terms.module').then(m => m.TermsModule),
+    data: {
+      title: 'Пользовательское соглашение'
+    }
   },
   {
     path: 'faq',
-    loadChildren: () => import('./modules/faq/faq.module').then(m => m.FaqModule)
+    loadChildren: () => import('./modules/faq/faq.module').then(m => m.FaqModule),
+    data: {
+      title: 'FAQ'
+    }
   },
   {
     path: 'contacts',
-    loadChildren: () => import('./modules/contacts/contacts.module').then(m => m.ContactsModule)
+    loadChildren: () => import('./modules/contacts/contacts.module').then(m => m.ContactsModule),
+    data: {
+      title: 'Контакты'
+    }
   }
 ];
 

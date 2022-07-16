@@ -2,11 +2,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { TuiRootModule, TuiDialogModule, TuiAlertModule, TuiThemeNightModule, TuiModeModule } from "@taiga-ui/core";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterModule } from "./modules/footer/footer.component";
-import { HeaderModule } from "./modules/header/header.component";
+import { FooterModule } from "./components/footer/footer.component";
+import { HeaderModule } from "./components/header/header.component";
 
 @NgModule({
   declarations: [
